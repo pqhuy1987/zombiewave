@@ -441,6 +441,7 @@
 		96E28B4D151F163100FBB29F /* hooge2.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 96E28B4B151F163100FBB29F /* hooge2.fnt */; };
 		96E28B4E151F163100FBB29F /* hooge2.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E28B4C151F163100FBB29F /* hooge2.png */; };
 		96E28B5115219D0A00FBB29F /* OptionsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E28B5015219D0900FBB29F /* OptionsMenu.m */; };
+		9733A0341E0AE1D600056829 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9733A0331E0AE1D600056829 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1005,6 +1006,7 @@
 		96E28B4C151F163100FBB29F /* hooge2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hooge2.png; path = Resources/hooge2.png; sourceTree = "<group>"; };
 		96E28B4F15219D0900FBB29F /* OptionsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsMenu.h; sourceTree = "<group>"; };
 		96E28B5015219D0900FBB29F /* OptionsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsMenu.m; sourceTree = "<group>"; };
+		9733A0331E0AE1D600056829 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1152,6 +1154,7 @@
 		96B8C5111505F21800399940 = {
 			isa = PBXGroup;
 			children = (
+				9733A0331E0AE1D600056829 /* Media.xcassets */,
 				96B8C5301505F21800399940 /* project */,
 				96B8C51F1505F21800399940 /* Frameworks */,
 				96B8C51D1505F21800399940 /* Products */,
@@ -1780,8 +1783,13 @@
 		96B8C5131505F21800399940 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					96B8C51B1505F21800399940 = {
+						DevelopmentTeam = JQNK74493B;
+					};
+				};
 			};
 			buildConfigurationList = 96B8C5161505F21800399940 /* Build configuration list for PBXProject "zombie-wave" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2115,6 +2123,7 @@
 				96E28B3E151F10A200FBB29F /* resume_game2-hd.png in Resources */,
 				96E28B3F151F10A200FBB29F /* resume_game-hd.png in Resources */,
 				96E28B40151F10A200FBB29F /* new_game2-hd.png in Resources */,
+				9733A0341E0AE1D600056829 /* Media.xcassets in Resources */,
 				96E28B41151F10A200FBB29F /* new_game-hd.png in Resources */,
 				96E28B42151F10A200FBB29F /* hooge2-ipad.png in Resources */,
 				96E28B43151F10A200FBB29F /* resume_game2-ipad.png in Resources */,
@@ -2250,8 +2259,8 @@
 		96B8C68F1505F21C00399940 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2262,7 +2271,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2270,14 +2280,13 @@
 		96B8C6901505F21C00399940 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -2287,17 +2296,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = JQNK74493B;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = project/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = project/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.twokingstudio.jbtowerdef6.100;
 				PRODUCT_NAME = "zombie-wave";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2306,16 +2319,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = JQNK74493B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = project/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = project/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.twokingstudio.jbtowerdef6.100;
 				PRODUCT_NAME = "zombie-wave";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

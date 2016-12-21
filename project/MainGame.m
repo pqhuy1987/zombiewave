@@ -99,10 +99,10 @@ static MainGame *sharedMainGame;
             
             CCLOG(@"this is an IPHONE");
 
-            remainingAmmoLabelLocation = ccp(230, 470);
-            waveNumberLabelLocation = ccp(265, 470);
-            ammoIconForMenuBarLocation = ccp(300, 470);
-            healthMeterLocation = ccp(160, 468);
+            remainingAmmoLabelLocation = ccp(230, 557);
+            waveNumberLabelLocation = ccp(265, 557);
+            ammoIconForMenuBarLocation = ccp(300, 557);
+            healthMeterLocation = ccp(160, 557);
             menuBarLocation = ccp(20, 430);
             
         }
